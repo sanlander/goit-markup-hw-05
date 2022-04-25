@@ -82,6 +82,7 @@ h1, h2, h3, h4, h5, p {
     font-weight: 500;
     line-height: 1.14;
     letter-spacing: 0.02em;
+    transition: color var(--transition-primary);
 }
 .nav-item {
     position: relative;
@@ -121,6 +122,7 @@ h1, h2, h3, h4, h5, p {
 .contacts-item {
     margin: auto 10px auto 0;
     fill: currentColor;
+    transition: color var(--transition-primary);
 }
 
 /* Section */
@@ -208,6 +210,9 @@ padding-bottom: 200px;
     display: flex;
     justify-content: space-between;
 }
+.our-work .item {
+    position: relative;
+}
 .our-work > .item:not(:last-child) {
     margin-right: 30px;
 }
@@ -220,6 +225,26 @@ padding-bottom: 200px;
     letter-spacing: 0.03em;
     margin-bottom: 50px;
 }
+.work-title {
+    display: flex;
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    height: 70px;
+    width: 100%;
+    background-color: rgba(47, 48, 58, 0.8);
+
+    font-weight: 700;
+    font-size: 14px;
+    line-height: 1.14;
+    text-align: center;
+    letter-spacing: 0.03em;
+    text-transform: uppercase;
+    color: #FFFFFF;
+    align-items: center;
+    justify-content: center;
+}
+
 
 /* Our-team */
 .our-team {
@@ -276,6 +301,7 @@ margin-right: 30px;
     justify-content: center;
     align-items: center;
     fill: #afb1b8;
+    transition: background-color var(--transition-primary), fill var(--transition-primary) ;
 }
 .soc-link a:hover, .soc-link a:focus{
     background-color: var(--accent-background-color);
@@ -303,6 +329,8 @@ margin-right: 30px;
     justify-content: center;
     align-items: center;
     fill: #afb1b8;
+    transition: border-color var(--transition-primary),
+    fill var(--transition-primary);
 }
 .clients-item a:hover, .clients-item a:focus{
 fill: var(--accent-text-color);
@@ -325,6 +353,7 @@ border-color: var(--accent-text-color);
     margin-right: 30px;
     margin-bottom: 30px;
 
+    transition: box-sizing var(--transition-primary), box-shadow var(--transition-primary);
     /* border: 1px solid #EEEEEE; */
 }
 .examples .img {
@@ -436,7 +465,7 @@ margin-right: 8px;
     
     height: 38px;
     border: 1px solid transparent;
-       
+    transition: color var(--transition-primary), background-color var(--transition-primary), box-shadow var(--transition-primary);
 }
 .button-filter:hover, .button-filter:focus {
     color: #FFFFFF;
@@ -446,6 +475,7 @@ margin-right: 8px;
     box-shadow: 0px 1px 2px 0px rgba(0, 0, 0, 0.08);
     
     box-shadow: 0px 3px 1px 0px rgba(0, 0, 0, 0.1);
+    
 }
 
 .button-order {
@@ -463,6 +493,8 @@ margin-right: 8px;
     padding: 10px 32px;
     box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
     border-radius: 4px;
+
+    transition: background-color var(--transition-primary);
 }
 .button-order:hover, .button-order:focus {
     background-color: #188CE8;
@@ -488,6 +520,7 @@ margin-right: 8px;
 }
 .footer-contacts {
     color: rgba(255, 255, 255, 0.6);
+    transition: color var(--transition-primary);
 }
 .footer-contacts:hover, .footer-contacts:focus {
     color: var(--accent-text-color);
@@ -514,6 +547,7 @@ margin-right: 8px;
 .footer-soc .soc a {
     fill: white;
     background-color: rgba(255, 255, 255, 0.1);
+    transition: background-color var(--transition-primary);
 }
 .footer-soc .soc a:hover, .footer-soc .soc a:focus {
     background-color:var(--accent-text-color);
@@ -541,11 +575,26 @@ margin-right: 8px;
     transform: translate(-50%, -50%);
     min-width: 528px;
     min-height: 581px;
+    max-height: 600px;
+    overflow: auto; 
     
-    padding: 20px;
+    padding: 33px;
     background-color: var(--primary-background-color);
     box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12),
     0px 1px 1px rgba(0, 0, 0, 0.14),
     0px 2px 1px rgba(0, 0, 0, 0.2);
     border-radius: 4px;
+
+    
+}
+.button-backrdop-close {
+    display: flex;
+    position: absolute;
+    top: 0;
+    right: 0;
+    background-color: transparent;
+    border: none;
+    margin: 8px;
+    padding: 0;
+    cursor: pointer;
 }
