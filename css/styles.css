@@ -100,9 +100,24 @@ h1, h2, h3, h4, h5, p {
     height: 4px;
     border-radius: 2px;
     background-color: var(--accent-background-color);
+}
 
-    /* transform: scaleX(0);
-    transition: transform 1s; */
+.menu-nav .link::before {
+    content: '';
+    position: absolute;
+    width: 0;
+    bottom: 0;
+    right: 0;
+    height: 4px;
+    border-radius: 2px;
+    background-color: var(--accent-background-color);
+    transition: width 0.5s,
+    left 0.5s;
+}
+.menu-nav .link:hover::before,
+.menu-nav .link:focus::before {
+    width: 100%;
+    left: 0;
 }
 
 .menu-nav .link:hover, .menu-nav .link:focus, .contacts .link:hover, .contacts .link:focus, .contacts-item:hover, .contacts-item:focus{
